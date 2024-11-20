@@ -25,8 +25,11 @@ function baseSortedIndex(array, value, retHighest) {
     while (low < high) {
       const mid = (low + high) >>> 1
       const computed = array[mid]
-      if (computed !== null && !isSymbol(computed) &&
-          (retHighest ? (computed <= value) : (computed < value))) {
+      if (
+        computed !== null &&
+        !isSymbol(computed) &&
+        (retHighest ? computed <= value : computed < value)
+      ) {
         low = mid + 1
       } else {
         high = mid

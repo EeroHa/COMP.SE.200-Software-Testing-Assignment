@@ -18,8 +18,6 @@ TODO
 
 TODO
 
-```
-
 ## Running Tests
 
 TODO
@@ -27,6 +25,3 @@ TODO
 ## License
 
 This project contains template code from Tampere University, in the `src`-directory, which is licensed under the MIT License. See the `src/LICENSE` file for more details.
-
-```
-

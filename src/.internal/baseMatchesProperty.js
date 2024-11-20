@@ -24,7 +24,7 @@ function baseMatchesProperty(path, srcValue) {
   }
   return (object) => {
     const objValue = get(object, path)
-    return (objValue === undefined && objValue === srcValue)
+    return objValue === undefined && objValue === srcValue
       ? hasIn(object, path)
       : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG)
   }

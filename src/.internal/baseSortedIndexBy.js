@@ -51,7 +51,7 @@ function baseSortedIndexBy(array, value, iteratee, retHighest) {
     } else if (othIsNull || othIsSymbol) {
       setLow = false
     } else {
-      setLow = retHighest ? (computed <= value) : (computed < value)
+      setLow = retHighest ? computed <= value : computed < value
     }
     if (setLow) {
       low = mid + 1

@@ -29,9 +29,7 @@ import isArrayLike from './isArrayLike.js'
  * // => ['0', '1']
  */
 function keys(object) {
-  return isArrayLike(object)
-    ? arrayLikeKeys(object)
-    : Object.keys(Object(object))
+  return isArrayLike(object) ? arrayLikeKeys(object) : Object.keys(Object(object))
 }
 
 export default keys

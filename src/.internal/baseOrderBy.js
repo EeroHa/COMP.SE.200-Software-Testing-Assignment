@@ -39,7 +39,7 @@ function baseOrderBy(collection, iteratees, orders) {
     result[++eachIndex] = {
       criteria,
       index: ++criteriaIndex,
-      value
+      value,
     }
   })
 
