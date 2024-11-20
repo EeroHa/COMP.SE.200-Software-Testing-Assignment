@@ -12,15 +12,42 @@ This repository contains the assignment for the COMP.SE.200 Software Testing cou
 
 ## Requirements
 
-TODO
+- Node installed (v22.1.0 verified to work)
+- npm installed
 
 ## Installation
 
-TODO
+Install dependencies:
 
-## Running Tests
+```
+npm install
+```
 
-TODO
+## Running Code Quality Assurance
+
+Run tests:
+
+```
+npm run test
+```
+
+Lint src files:
+
+```
+npm run lint:src
+```
+
+Lint test files:
+
+```
+npm run lint:tests
+```
+
+Format all files:
+
+```
+npm run format
+```
 
 ## License
 
