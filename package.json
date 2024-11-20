@@ -7,12 +7,16 @@
   "scripts": {
     "test": "jest",
     "format": "prettier . --write",
-    "check-format": "prettier . --check"
+    "check-format": "prettier . --check",
+    "lint:src": "eslint src/",
+    "lint:tests": "eslint tests/"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
     "jest": "^29.7.0",
     "prettier": "^3.3.3"
   }
