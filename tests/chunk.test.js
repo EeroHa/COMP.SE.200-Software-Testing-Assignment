@@ -6,8 +6,8 @@ describe('chunk', () => {
     test('chunks an array correctly', () => {
       const array = ['a', 'b', 'c' ,'d', 'e', 'f', 'g', 'h', 'i', 'j'];
       
-        expect(chunk(array, 2)).toBe([['a', 'b'], ['c' ,'d'], ['e', 'f'], ['g', 'h'], ['i', 'j']]);
-        expect(chunk(array, 3)).toBe([['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j']]);
+        expect(chunk(array, 2)).toEqual([['a', 'b'], ['c' ,'d'], ['e', 'f'], ['g', 'h'], ['i', 'j']]);
+        expect(chunk(array, 3)).toEqual([['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j']]);
         
     })
 
@@ -19,13 +19,16 @@ describe('chunk', () => {
         const array = ['a', 'b', 'c' ,'d'];
         expect(chunk(array, -1)).toEqual([]);
     })
-    test('non numeral array size', () => {
+    test('non integer array size', () => {
         const array = ['a', 'b', 'c' ,'d'];
-        expect(chunk(array, 'number')).toEqual([]);
+        expect(chunk(array, 2.5)).toEqual([['a', 'b'], ['c' ,'d']]);
     })
     test('missing array', ()=> {
         expect(chunk(null)).toEqual([]);
     })
+    test('handles mixed data types', () => {
+        expect(chunk([1, 'a', null, undefined, {}], 2)).toEqual([[1, 'a'], [null, undefined], [{}]]);
+    });
 
     test('empty array', () => {
         expect(chunk([], 2)).toEqual([]);
