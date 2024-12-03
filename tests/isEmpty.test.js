@@ -86,4 +86,15 @@ describe('isEmpty', () => {
     }
     testFunc(1, 2, 3)
   })
+
+  test('should return true for empty prototype objects', () => {
+    const obj = Object.prototype
+    expect(isEmpty(obj)).toBe(true)
+  })
+
+  test('should return false for non-empty prototype objects', () => {
+    const obj = Object.prototype
+    obj.b = 2
+    expect(isEmpty(obj)).toBe(false)
+  })
 })
