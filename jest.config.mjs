@@ -6,4 +6,5 @@ export default {
   collectCoverage: true,
   coverageReporters: ['lcov', 'text'],
   coveragePathIgnorePatterns: ['/src/.internal/'],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
 }
