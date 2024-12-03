@@ -97,4 +97,14 @@ describe('isEmpty', () => {
     obj.b = 2
     expect(isEmpty(obj)).toBe(false)
   })
+
+  test('should return true for objects with only inherited properties', () => {
+    function Parent() {
+      this.a = 1
+    }
+    Parent.prototype.b = 2
+    const obj = new Parent()
+    delete obj.a
+    expect(isEmpty(obj)).toBe(true)
+  })
 })
