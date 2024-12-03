@@ -4,6 +4,12 @@
 
 This repository contains the assignment for the COMP.SE.200 Software Testing course. The goal of this assignment is to develop unit tests for the components determined in the first part of the assignment to ensure the quality and reliability of the provided components.
 
+## Status
+
+### Test Coverage
+
+[![Coverage Status](https://coveralls.io/repos/github/EeroHa/COMP.SE.200-Software-Testing-Assignment/badge.svg?branch=main)](https://coveralls.io/github/EeroHa/COMP.SE.200-Software-Testing-Assignment?branch=main)
+
 ## Structure
 
 - `src/`: Contains the source code to be tested from Tampere University for the assignment.
